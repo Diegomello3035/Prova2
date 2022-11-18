@@ -12,7 +12,7 @@ public class Cliente
     private Long id;
     @NotNull(message = "O nome é obrigatório!")
     private String nomeCompleto;
-    @NotNull(message ="A profissão é obrigatória")
+    @NotNull(message ="A profissão")
     private String profissao;
 
     @OneToMany(cascade = CascadeType.ALL)
