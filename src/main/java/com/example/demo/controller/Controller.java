@@ -1,7 +1,7 @@
 package com.example.demo.controller;
 
+import com.example.demo.dto.Repositorio;
 import com.example.demo.entity.Cliente;
-import com.example.demo.repository.Repository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,7 +14,7 @@ import java.util.Optional;
 public class Controller
 {
     @Autowired
-    Repository resposity;
+    Repositorio resposity;
     @PostMapping
     public Cliente create(@RequestBody @Valid Cliente cliente) {
             Cliente clienteSaved = resposity.save(cliente);
